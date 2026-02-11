@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="English">
+<head>
+    <title>Calculator</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; background: #f4f4f4; }
+        .calc-card { background: white; padding: 20px; border-radius: 10px; display: inline-block; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        input, select, button { padding: 10px; margin: 5px; border-radius: 5px; border: 1px solid #ccc; }
+        button { background: #28a745; color: white; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="calc-card">
+        <h2>God-centered Engineer Calculator</h2>
+        <form method="POST">
+            <input type="number" name="num1" step="any" required placeholder="Number 1">
+            <select name="operation">
+                <option value="add">+</option>
+                <option value="subtract">-</option>
+                <option value="multiply">×</option>
+                <option value="divide">÷</option>
+            </select>
+            <input type="number" name="num2" step="any" required placeholder="Number 2">
+            <br>
+            <button type="submit">Calculate</button>
+        </form>
+        {% if result %}
+            <h3>Result: {{ result }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
